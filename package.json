@@ -1,0 +1,38 @@
+{
+  "name": "reedpay",
+  "version": "0.1.0",
+  "description": "Reedpay API wrapper",
+  "homepage": "https://github.com/reedsec/reedpay-nodejs",
+  "author": "Reedpay <wuhz@reedsec.com> (https://reedsec.com/)",
+  "contributors": [
+    "Wu Hengzhi <wuhz@reedsec.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reedsec/reedpay-nodejs.git"
+  },
+  "engines": {
+    "node": ">= v0.10.0"
+  },
+  "main": "lib/reedpay.js",
+  "keywords": [
+    "Reedpay"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reedsec/reedpay-nodejs/issues"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "lodash": "^4.16.4",
+    "qs": "^6.2.1",
+    "when": "^3.7.7"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "mocha": "^3.1.2"
+  }
+}
