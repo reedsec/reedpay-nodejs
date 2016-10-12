@@ -1,6 +1,6 @@
 {
   "name": "reedpay",
-  "version": "0.1.0",
+  "version": "0.1.1-alpha",
   "description": "Reedpay API wrapper",
   "homepage": "https://github.com/reedsec/reedpay-nodejs",
   "author": "Reedpay <wuhz@reedsec.com> (https://reedsec.com/)",
