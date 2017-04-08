@@ -13,8 +13,21 @@
 // const APP_ID = 'app_58e637bd23fbf411b32457f5';
 // const API_KEY = 'sk_test_6bccc6043b987d3233c6055e37906272';
 
-const APP_ID = 'app_58e6f5b5669d24376a16e8e7';
-const API_KEY = 'sk_test_d0a6e3a7f4acb9b4ee4e060b00b32d28';
+// reedpay-a2 wechat direct
+// const APP_ID = 'app_58e74d9b58c448597cfcd19f';
+// const API_KEY = 'sk_test_8c70c3b2f810732a68392a09ffe45171';
+
+// localhost wechat direct
+// const APP_ID = 'app_58e75298d31e6e4ccc0f65f7';
+// const API_KEY = 'sk_test_5b934ecf2832ef649c4236cfeedacbdb';
+
+// localhost tianxia indirect
+// const APP_ID = 'app_58e79f6ea0dbb964c907868b';
+// const API_KEY = 'sk_test_623b85a513402e6c7a56dffaf51a7260';
+
+// reedpay-a2 tianxia indirect
+const APP_ID = 'app_58e884950aba5c7fc39f7384';
+const API_KEY = 'sk_test_c67e0207aac38cbbd7f20b63d5cb05d4';
 
 
 const reedpay = require('../lib/reedpay')(API_KEY);
@@ -28,23 +41,26 @@ reedpay.setSecretKey('reedsec_secret');
 reedpay.setHost('reedpay-a2.reedsec.com', '443', 'https');
 
 // const channel = 'wx_native_cb';
-// const trade_type = 'wx_qrcode';
-const trade_type = 'wx_scan';
+// const trade_type = 'wx_jsapi';
+const trade_type = 'wx_qrcode';
+// const trade_type = 'wx_scan';
 // const channel = 'ali_qraaaaaaaaaaaaaaa';
 
 let extra = {
   client_ip: '127.0.0.1',
-  auth_code : '130159042385901390'
+  notify_url: 'https://reedpay-a2.reedsec.com/api/v2/webhooks/reedpay',
+  // openid: 'ouNu5wBrEdsxnXBegLrZdDPhE3yY'
+  // auth_code : '130159042385901390'
 };
 
-switch (trade_type) {
-  case 'ali_wap':
-    extra = {
-      'success_url': 'http://localhost/success',
-      'cancel_url': 'http://localhost/cancel'
-    };
-    break;
-}
+// switch (trade_type) {
+//   case 'ali_wap':
+//     extra = {
+//       'success_url': 'http://localhost/success',
+//       'cancel_url': 'http://localhost/cancel'
+//     };
+//     break;
+// }
 
 const now = new Date();
 const order_no = now.getTime();
@@ -57,7 +73,7 @@ reedpay.sale.create({
   trade_type: trade_type,
   amount: 1,
   subject: 'test',
-  detail: 'test',
+  // detail: 'test',
   extra: extra
 }, function(err, res) {
   if (err) {
