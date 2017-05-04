@@ -22,26 +22,26 @@
 // reedpay.setSecretKey('reedsec_secret');
 
 // localhost wechat direct
-// const APP_ID = 'app_58e75298d31e6e4ccc0f65f7';
-// const API_KEY = 'sk_test_5b934ecf2832ef649c4236cfeedacbdb';
+// const APP_ID = 'app_58f98005bc16fb675504dbb2';
+// const API_KEY = 'sk_test_1db42604935791911c8abc6a7d2d161d';
 // const reedpay = require('../lib/reedpay')(API_KEY);
-// reedpay.setSecretKey('reedsec_secret');
+// reedpay.setSecretKey('12345');
 
 // localhost tianxia indirect
 // const APP_ID = 'app_58e79f6ea0dbb964c907868b';
 // const API_KEY = 'sk_test_623b85a513402e6c7a56dffaf51a7260';
 
 // reedpay-a2 tianxia indirect
-// const APP_ID = 'app_58e884950aba5c7fc39f7384';
-// const API_KEY = 'sk_test_c67e0207aac38cbbd7f20b63d5cb05d4';
-// const reedpay = require('../lib/reedpay')(API_KEY);
-// reedpay.setSecretKey('reedsec_secret');
+const APP_ID = 'app_58e884950aba5c7fc39f7384';
+const API_KEY = 'sk_test_c67e0207aac38cbbd7f20b63d5cb05d4';
+const reedpay = require('../lib/reedpay')(API_KEY);
+reedpay.setSecretKey('reedsec_secret');
 
 // paydev tianxia qrcode
-const APP_ID = 'app_58eb5a9d5b3e556a816a1b94';
-const API_KEY = 'sk_test_8a21a27fc35bc96694656f1213baae2d';
-const reedpay = require('../lib/reedpay')(API_KEY);
-reedpay.setSecretKey('Tester01Secret');
+// const APP_ID = 'app_58eb5a9d5b3e556a816a1b94';
+// const API_KEY = 'sk_test_8a21a27fc35bc96694656f1213baae2d';
+// const reedpay = require('../lib/reedpay')(API_KEY);
+// reedpay.setSecretKey('Tester01Secret');
 
 // paydev tianxia wx_jsapi
 // const APP_ID = 'app_58eb5aed5b3e556a816a1b96';
@@ -57,22 +57,23 @@ reedpay.setSecretKey('Tester01Secret');
 // reedpay.setSecretKey('1234');
 // reedpay.setSecretKey('reedsec_secret');
 // reedpay.setHost('127.0.0.1', '80', 'http');
-// reedpay.setHost('reedpay-a2.reedsec.com', '443', 'https');
-reedpay.setHost('paydev.reedsec.com', '443', 'https');
+reedpay.setHost('reedpay-a2.reedsec.com', '443', 'https');
+// reedpay.setHost('paydev.reedsec.com', '443', 'https');
 
 // const channel = 'wx_native_cb';
-// const trade_type = 'wx_jsapi';
+const trade_type = 'wx_jsapi';
 // const trade_type = 'wx_qrcode';
 // const trade_type = 'ali_qrcode';
 // const trade_type = 'qq_qrcode';
-const trade_type = 'wx_qrcode';
+// const trade_type = 'wx_qrcode';
 // const channel = 'ali_qraaaaaaaaaaaaaaa';
 
 let extra = {
   client_ip: '127.0.0.1',
   // notify_url: 'https://reedpay-a2.reedsec.com/api/v2/webhooks/reedpay',
   notify_url: 'https://paydev.reedsec.com/api/v2/webhooks/reedpay',
-  // openid: 'ouNu5wBrEdsxnXBegLrZdDPhE3yY'
+  // notify_url: 'https://localhost/webhooks/mypay',
+  openid: 'ouNu5wBrEdsxnXBegLrZdDPhE3yY'
   // auth_code : '130050713223137284'
 };
 
