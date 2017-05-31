@@ -1,6 +1,8 @@
 'use strict';
 
-
+// localhost for Alipay merchant_direct
+// const API_KEY = 'sk_test_83b113e57bbe85935fb20d4a1c586fa7';
+// const APP_ID = 'app_5926ce6b6029dd6f89a90c62';
 
 // const API_KEY = "sk_test_149532cd63d8624cd6e43f2a13898669";
 // const APP_ID = 'app_585b91e40382f6615980fe54';
@@ -16,10 +18,16 @@
 // const API_KEY = 'sk_test_6bccc6043b987d3233c6055e37906272';
 
 // reedpay-a2 wechat direct
-// const APP_ID = 'app_58e74d9b58c448597cfcd19f';
-// const API_KEY = 'sk_test_8c70c3b2f810732a68392a09ffe45171';
-// const reedpay = require('../lib/reedpay')(API_KEY);
-// reedpay.setSecretKey('reedsec_secret');
+// const APP_ID = 'app_5928ed91c8ba79267c54a908';
+// const API_KEY = 'sk_test_e7a12a0b2b81de275948834b0bb87b11';
+
+// 多码合一沙盒
+// const APP_ID = 'app_5929445bca802217a60b6344';
+// const API_KEY = 'sk_test_5172bdcdfc4f8cbcca76c497e9f3892c';
+
+// 多码合一
+const APP_ID = 'app_59293f5f936088180fce9d53';
+const API_KEY = 'sk_test_07705c954c576deede8e4e38f68529fc';
 
 // localhost wechat direct
 // const APP_ID = 'app_58f98005bc16fb675504dbb2';
@@ -32,8 +40,9 @@
 // const API_KEY = 'sk_test_623b85a513402e6c7a56dffaf51a7260';
 
 // reedpay-a2 tianxia indirect
-const APP_ID = 'app_58e884950aba5c7fc39f7384';
-const API_KEY = 'sk_test_c67e0207aac38cbbd7f20b63d5cb05d4';
+// const APP_ID = 'app_58e884950aba5c7fc39f7384';
+// const API_KEY = 'sk_test_c67e0207aac38cbbd7f20b63d5cb05d4';
+
 const reedpay = require('../lib/reedpay')(API_KEY);
 reedpay.setSecretKey('reedsec_secret');
 
@@ -61,20 +70,22 @@ reedpay.setHost('reedpay-a2.reedsec.com', '443', 'https');
 // reedpay.setHost('paydev.reedsec.com', '443', 'https');
 
 // const channel = 'wx_native_cb';
-const trade_type = 'wx_jsapi';
+// const trade_type = 'wx_jsapi';
 // const trade_type = 'wx_qrcode';
 // const trade_type = 'ali_qrcode';
 // const trade_type = 'qq_qrcode';
 // const trade_type = 'wx_qrcode';
-// const channel = 'ali_qraaaaaaaaaaaaaaa';
+const trade_type = 'ali_qrcode';
+// const trade_type = 'ali_scan';
+// const trade_type = 'ali_wap';
 
 let extra = {
   client_ip: '127.0.0.1',
   // notify_url: 'https://reedpay-a2.reedsec.com/api/v2/webhooks/reedpay',
-  notify_url: 'https://paydev.reedsec.com/api/v2/webhooks/reedpay',
+  notify_url: 'https://reedpay-a2.reedsec.com/api/v2/webhooks/alipay',
   // notify_url: 'https://localhost/webhooks/mypay',
-  openid: 'ouNu5wBrEdsxnXBegLrZdDPhE3yY'
-  // auth_code : '130050713223137284'
+  // openid: 'ouNu5wBrEdsxnXBegLrZdDPhE3yY'
+  // auth_code : '285628038695063500'
 };
 
 // switch (trade_type) {

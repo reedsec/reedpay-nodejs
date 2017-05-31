@@ -1,11 +1,17 @@
 'use strict';
 
 // localhost tianxia trasfer
-const APP_ID = 'app_590a5c3bd5888c08812c55b6';
-const API_KEY = 'sk_test_d23527e898ce2dfb5b29c8db4f372b45';
+// const APP_ID = 'app_590a5c3bd5888c08812c55b6';
+// const API_KEY = 'sk_test_d23527e898ce2dfb5b29c8db4f372b45';
+// const reedpay = require('../lib/reedpay')(API_KEY);
+// reedpay.setSecretKey('reedsec_secret');
+
+
+// reedpay-a2 tianxia trasfer
+const APP_ID = 'app_590a92b7da1f4c40e2598981';
+const API_KEY = 'sk_test_4126bcba3b191733c7e4f97a6bd2482e';
 const reedpay = require('../lib/reedpay')(API_KEY);
 reedpay.setSecretKey('reedsec_secret');
-
 
 
 // reedpay.setPrivateKeyPath(__dirname + '/reedpay_private_key.pem');
@@ -13,8 +19,8 @@ reedpay.setSecretKey('reedsec_secret');
 // reedpay.setSecretKey('8.8.8.8');
 // reedpay.setSecretKey('1234');
 // reedpay.setSecretKey('reedsec_secret');
-reedpay.setHost('127.0.0.1', '80', 'http');
-// reedpay.setHost('reedpay-a2.reedsec.com', '443', 'https');
+// reedpay.setHost('127.0.0.1', '80', 'http');
+reedpay.setHost('reedpay-a2.reedsec.com', '443', 'https');
 // reedpay.setHost('paydev.reedsec.com', '443', 'https');
 
 
