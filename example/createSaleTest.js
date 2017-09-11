@@ -4,18 +4,6 @@
 // const API_KEY = 'sk_test_83b113e57bbe85935fb20d4a1c586fa7';
 // const APP_ID = 'app_5926ce6b6029dd6f89a90c62';
 
-// const API_KEY = "sk_test_149532cd63d8624cd6e43f2a13898669";
-// const APP_ID = 'app_585b91e40382f6615980fe54';
-
-// const API_KEY = 'sk_test_d84ec87b7e6dbca5a8ffa6c0f7f25115';
-// const API_KEY = 'sk_test_a2df16fc8e44f8818cc722927d4c641e';
-// const APP_ID = 'app_58d126eaea4a965e730114e8';
-
-// const APP_ID = 'app_58de1746fd897549f29ef7ee';
-// const API_KEY = 'sk_test_11c3ae948a95c343ab68044f4797c829';
-
-// const APP_ID = 'app_58e637bd23fbf411b32457f5';
-// const API_KEY = 'sk_test_6bccc6043b987d3233c6055e37906272';
 
 // reedpay-a2 wechat direct
 // const APP_ID = 'app_5928ed91c8ba79267c54a908';
@@ -26,8 +14,8 @@
 // const API_KEY = 'sk_test_5172bdcdfc4f8cbcca76c497e9f3892c';
 
 // 多码合一
-const APP_ID = 'app_59293f5f936088180fce9d53';
-const API_KEY = 'sk_test_07705c954c576deede8e4e38f68529fc';
+// const APP_ID = 'app_59293f5f936088180fce9d53';
+// const API_KEY = 'sk_test_07705c954c576deede8e4e38f68529fc';
 
 // localhost wechat direct
 // const APP_ID = 'app_58f98005bc16fb675504dbb2';
@@ -43,8 +31,13 @@ const API_KEY = 'sk_test_07705c954c576deede8e4e38f68529fc';
 // const APP_ID = 'app_58e884950aba5c7fc39f7384';
 // const API_KEY = 'sk_test_c67e0207aac38cbbd7f20b63d5cb05d4';
 
+// reedpay-a2 pingan
+const APP_ID = 'app_598917c237c7ac02ee6edc4e';
+const API_KEY = 'sk_live_168f6a294fa32c7ba096f38f05d7be17';
+
 const reedpay = require('../lib/reedpay')(API_KEY);
-reedpay.setSecretKey('reedsec_secret');
+// reedpay.setSecretKey('reedsec_secret');
+reedpay.setSecretKey('123456');
 
 // paydev tianxia qrcode
 // const APP_ID = 'app_58eb5a9d5b3e556a816a1b94';
@@ -70,19 +63,19 @@ reedpay.setHost('reedpay-a2.reedsec.com', '443', 'https');
 // reedpay.setHost('paydev.reedsec.com', '443', 'https');
 
 // const channel = 'wx_native_cb';
-// const trade_type = 'wx_jsapi';
+const trade_type = 'wx_jsapi';
 // const trade_type = 'wx_qrcode';
 // const trade_type = 'ali_qrcode';
 // const trade_type = 'qq_qrcode';
 // const trade_type = 'wx_qrcode';
-const trade_type = 'ali_qrcode';
+// const trade_type = 'ali_qrcode';
 // const trade_type = 'ali_scan';
 // const trade_type = 'ali_wap';
 
 let extra = {
   client_ip: '127.0.0.1',
-  // notify_url: 'https://reedpay-a2.reedsec.com/api/v2/webhooks/reedpay',
-  notify_url: 'https://reedpay-a2.reedsec.com/api/v2/webhooks/alipay',
+  notify_url: 'https://reedpay-a2.reedsec.com/api/v2/webhooks/wxpay',
+  show_url: 'https://reedpay-a2.reedsec.com/cashier/reedpay'
   // notify_url: 'https://localhost/webhooks/mypay',
   // openid: 'ouNu5wBrEdsxnXBegLrZdDPhE3yY'
   // auth_code : '285628038695063500'
@@ -117,3 +110,32 @@ reedpay.sale.create({
   }
   console.log(res);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
